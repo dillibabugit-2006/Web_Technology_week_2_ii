@@ -1,108 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Record - Animation</title>
+<title>Product Card Animation</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+<style>
 
-        .card {
-            width: 450px;
-            padding: 25px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-            animation: slideIn 2s ease;
-        }
+body {
+font-family: Arial, sans-serif;
+background: #f2f2f2;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+}
 
-        h2 {
-            text-align: center;
-            color: darkblue;
-            animation: glowText 2s infinite alternate;
-        }
+.card {
+width: 320px;
+padding: 20px;
+background: white;
+border-radius: 12px;
+box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+text-align: center;
+animation: slideIn 2s ease;
+}
 
-        table {
-            width: 100%;
-            margin-top: 15px;
-            border-collapse: collapse;
-        }
+h2 {
+color: darkblue;
+animation: glowText 2s infinite alternate;
+}
 
-        td {
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
+.price {
+color: green;
+font-size: 20px;
+font-weight: bold;
+}
 
-        .label {
-            font-weight: bold;
-            background: #e0e0ff;
-            width: 40%;
-        }
+button {
+margin-top: 15px;
+padding: 10px 15px;
+background: orange;
+border: none;
+color: white;
+border-radius: 5px;
+cursor: pointer;
+}
 
-        @keyframes slideIn {
-            from {
-                transform: translateY(-60px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
+button:hover {
+background: darkorange;
+}
 
-        @keyframes glowText {
-            from {
-                color: darkblue;
-                text-shadow: 0 0 5px skyblue;
-            }
-            to {
-                color: red;
-                text-shadow: 0 0 10px orange;
-            }
-        }
+/* Animation */
+@keyframes slideIn {
+from {
+transform: translateY(-60px);
+opacity: 0;
+}
+to {
+transform: translateY(0);
+opacity: 1;
+}
+}
 
-    </style>
+@keyframes glowText {
+from {
+color: darkblue;
+text-shadow: 0 0 5px skyblue;
+}
+to {
+color: red;
+text-shadow: 0 0 10px orange;
+}
+}
+
+</style>
 </head>
 
 <body>
 
-    <div class="card">
-        <h2>Student Record</h2>
-
-        <table>
-            <tr>
-                <td class="label">Student Name</td>
-                <td>Dillibabu</td>
-            </tr>
-            <tr>
-                <td class="label">Roll Number</td>
-                <td>241801057</td>
-            </tr>
-            <tr>
-                <td class="label">Course</td>
-                <td>B.Tech AI&DS</td>
-            </tr>
-            <tr>
-                <td class="label">Semester</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td class="label">Email</td>
-                <td>jdillibabu1@gmail.com</td>
-            </tr>
-            <tr>
-                <td class="label">Phone</td>
-                <td> 7332341423</td>
-            </tr>
-        </table>
-    </div>
+<div class="card">
+<h2>Smartphone</h2>
+<p>Latest 5G Mobile with 8GB RAM</p>
+<p class="price">₹15,000</p>
+<button>Add to Cart</button>
+</div>
 
 </body>
 </html>
